@@ -35,7 +35,7 @@ myApp.controller(
                 {
                     var city = $rootScope.cities[i].name.toLowerCase();
                     
-                    if (city == value.toLowerCase || city.includes(value))
+                    if (city == value.toLowerCase() || city.includes(value.toLowerCase()))
                     {
                         valid_cities.push($rootScope.cities[i]);
                     }
