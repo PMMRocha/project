@@ -1,0 +1,19 @@
+<div class="result-container">
+
+	<a class="back_search"
+       ng-href="/"
+       ng-click="openSearchBox()">X</a>
+
+	<h1>Results for {{city_par}}</h1>
+    
+    <span id="not_found_msg"></span>
+
+    <ul id="results_box">
+        <li ng-animate="'animate'"
+            ng-repeat="city in city_result"
+            ng-click="getWeather(city)">
+            {{city.name}}, {{city.country}}
+        </li>
+    </ul>
+
+</div>
