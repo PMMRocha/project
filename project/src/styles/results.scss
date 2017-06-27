@@ -1,0 +1,76 @@
+.result-container
+{
+    @include size();
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $brown;
+    text-align: center;
+    font-family: "Open Sans", Arial, Verdana;
+    font-size: 14px;
+    color: #B7B7B7;
+    overflow: auto;
+    
+    .back_search
+    {
+        @include size(50px, 50px);
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        color: rgba(#ffffff, 0.8);
+        font-size: 20px;
+        text-decoration: none;
+        line-height: 50px;
+        @include round-corners(50%);
+        @include transition-all();
+        
+        &:hover
+        {
+            background-color: rgba(#ffffff, 0.8);
+            color: black;
+        }
+    }
+
+    ul
+    {
+        @include size(80%, auto);
+        padding: 10px 0;
+        margin: 100px auto;
+        list-style: none;
+        overflow: auto;
+        @include transition-all();
+        @include animation('reduce 1s');
+        
+        @media screen and (max-width: 700px) {
+            width: 95%;
+        }
+
+        li
+        {
+            width: 30%;
+            float: left;
+            background-color: rgba(#ffffff, 0.8);
+            color: black;
+            font-size: 20px;
+            padding: 15px 20px;
+            margin: 10px 1.6%;
+            @include round-corners(25px);
+            box-shadow: 4px 4px 9px black;
+            @include transition-all();
+            cursor: pointer;
+            
+            &:hover
+            {
+                @include scale(1.05, 1.05);
+            }
+            
+            @media screen and (max-width: 1150px) {
+                width: 45%;
+            }
+            
+            @media screen and (max-width: 700px) {
+                width: 95%;
+            }
+        }
+    }
+}
