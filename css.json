@@ -1,0 +1,9 @@
+[
+	"src/styles/components/colours.scss",
+	"src/styles/components/sizes.scss",
+	"src/styles/components/mixins.scss",
+	"src/styles/components/animations.scss",
+    "src/styles/main.scss",
+    "src/styles/results.scss",
+    "src/styles/weather.scss"
+]
